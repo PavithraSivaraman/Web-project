@@ -1,0 +1,114 @@
+body {
+    margin: 0; 
+    background-color: lightgray;
+}
+nav {
+background:linear-gradient(90deg,#30cc93,#137dbb,#bc53cc);
+width: 100%;
+height: 10px;
+position:fixed;
+border-radius: 2px;
+padding: 50px;
+z-index: 2;
+top: 0;
+left: 0;   
+}
+nav a {
+color: rgb(247, 243, 243);
+font-family: Verdana;
+font-size: large;
+margin: 50px;
+text-decoration: none;
+position:relative;
+}
+.regionslist, .spirituallist, .wildlist {
+display: none; 
+flex-wrap: wrap;
+position:absolute;
+text-align: left;
+top:100%;
+background-color:white;
+border: 1px solid black;
+z-index: 1;
+padding: 20px;
+left: 50%;
+transform: translateX(-50%);
+background:linear-gradient(45deg,#a5f4fa,#ade3e7,#f3f0f3e7);
+}
+.video-container {
+position: relative;
+top:70px;
+width: 100%; /* Full width */
+padding-top: 56.25%; 
+}
+nav a:hover {
+background-color: rgb(0, 77, 128);
+}
+.regionslist label, .spirituallist label, .wildlist label {
+display:block;
+margin: 5px;
+flex-direction: column; 
+align-items: center; 
+width: 200px;
+}
+video {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom:60px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background-color: rgba(14, 13, 13, 0.5);
+}
+.container3
+{
+    display:flex;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    width:600px;
+    height:400px;
+    position: relative;
+    z-index: 0;
+}
+.close-btn {
+    position: absolute; /* Position the button absolutely within the container */
+    top: 10px; /* 10px from the top */
+    right: 5px; /* 10px from the right */
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: rgb(202, 23, 23); /* Red color */
+}
+.close{
+    border: none;
+    color:rgb(25, 23, 23); 
+    font-size: 20px;
+    background-color: #fff;
+    
+}
+.container1
+{
+    display:flex;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    width:600px;
+    height:400px;
+    position: relative;
+    z-index: 0;
+}

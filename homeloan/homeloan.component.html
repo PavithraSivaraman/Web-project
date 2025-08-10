@@ -1,0 +1,48 @@
+<!-- home-loan-calculator.component.html -->
+<div class="loan-container">
+    <div class="left-panel">
+      <h1>Home Loans</h1>
+      <p>
+        At <strong>FinanceBro Bank</strong>, we understand that a home loan is not just a financial transaction.
+        It's your gateway to comfort, stability, and a space you can call your own.
+      </p>
+      <p>
+        From celebrating milestones to finding peace after a long day — your home is where life happens.
+        Let us help you build those dreams.
+      </p>
+      <button  class="btn-apply" (click)="submitApplication()">Apply Online</button>
+    </div>
+  
+    <div class="right-panel">
+      <div class="calculator">
+        <h2>Home Loan EMI Calculator</h2>
+  
+        <label>Loan Amount: <span>{{ loanAmount | currency:'INR' }}</span></label>
+        <input type="range" min="100000" max="100000000" step="100000" [(ngModel)]="loanAmount" (input)="calculateEMI()" />
+  
+        <label>Tenure (Years): <span>{{ tenure }}</span></label>
+        <input type="range" min="1" max="30" [(ngModel)]="tenure" (input)="calculateEMI()" />
+  
+        <label>Interest Rate (% P.A.): <span>{{ interestRate }}</span></label>
+        <input type="range" min="0.5" max="15" step="0.1" [(ngModel)]="interestRate" (input)="calculateEMI()" />
+  
+        <div class="result">
+          <p>Monthly EMI: <strong>{{ emi | currency:'INR' }}</strong></p>
+          <p>Principal: <strong>{{ loanAmount | currency:'INR' }}</strong></p>
+          <p>Interest: <strong>{{ interestAmount | currency:'INR' }}</strong></p>
+          <p>Total Payable: <strong>{{ totalAmount | currency:'INR' }}</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <table class="doc-table">
+    <tr><th>Document Name</th><th>Status</th></tr>
+    <tr><td>Aadhar Proof</td><td>✔️</td></tr>
+    <tr><td>PAN Card</td><td>✔️</td></tr>
+    <tr><td>Smart Card</td><td>✔️</td></tr>
+    <tr><td>Passport</td><td>✔️</td></tr>
+    <tr><td>Visa</td><td>✔️</td></tr>
+    <tr><td>Asset Document</td><td>✔️</td></tr>
+  </table>
+  

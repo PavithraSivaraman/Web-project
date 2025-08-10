@@ -1,0 +1,136 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+}
+
+header {
+  background-color: #33177f;
+  height: 50px;
+}
+
+header h3 {
+  color: #e5dde5;
+  font-size: xx-large;
+  text-align: center;
+  line-height: 50px; /* Center the text vertically */
+}
+
+.overlay {
+  background-color: rgba(255, 255, 255, 0.827);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.booking-form {
+  background: linear-gradient(to bottom right, #eceff3, #f6f8f8);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(119, 123, 155, 0.882);
+  max-width: 600px; /* Increased width for better layout */
+  width: 100%;
+}
+
+.booking-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #141212;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.book-button,
+.view-button,
+.delete-button,
+.done-button,
+.edit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #212b88;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 5px; /* Space between buttons */
+}
+
+.book-button:hover,
+.view-button:hover,
+.delete-button:hover,
+.done-button:hover,
+.edit-button:hover {
+  background-color: #03153b;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+td {
+  background-color: #ffffff;
+}
+
+td input {
+  width: 60px; /* Fixed width for ticket count input */
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.actions {
+  display: flex;
+  gap: 5px; /* Space between action buttons */
+}
+
+.delete-button,
+.done-button {
+  background-color: #dc3545; /* Red for delete */
+}
+
+.delete-button:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+.done-button {
+  background-color: #28a745; /* Green for done */
+}
+
+.done-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}

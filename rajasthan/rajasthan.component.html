@@ -1,0 +1,41 @@
+<header>
+  <a routerLink="/home">
+    <img src="images/Website-logo.jpg" alt="logo" style="height: 50px; width: 80px; background: transparent; border-radius: 20px;">
+  </a>
+  <a routerLink="/states">
+  <div class="back">BACK</div>
+  </a>
+  <a class="booking" routerLink="/book">
+    <div>Booking</div>
+  </a>
+  <h1>Your Travel Diary.....</h1>
+</header>
+
+  <div class="titlecontainer">
+    <div class="titleheading">Experience Rajasthan</div>
+  </div>
+  
+  <div class="titlecontainer">
+    <div class="tagline">City Of Diversity</div>
+  </div>
+  
+  <div class="side">Cities to add to your bucket list</div>
+  
+  <div>
+    <figure class="titlepics-container">
+      <img id="titlepics" [src]="currentImage.src" [alt]="currentImage.caption" height="100%" width="100%">
+      <figcaption id="titlecaption">{{ currentImage.caption }}</figcaption>
+    </figure>
+  </div>
+  
+  <div class="side">Flavours to cherish</div>
+  
+  <div>
+    <div *ngFor="let place of places" class="pics-container">
+      <figure>
+        <img class="pics" [src]="place.src" [alt]="place.alt" height="300px" width="300px">
+        <figcaption class="caption">{{ place.caption }}</figcaption>
+      </figure>
+    </div>
+  </div>
+  

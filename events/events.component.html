@@ -1,0 +1,124 @@
+<nav>
+    <a (click)="toggleRegions($event)">Events</a>
+    <div class="regionslist" [style.display]="showRegions ? 'flex' : 'none'">
+      <table>
+        <tr>
+          <td>
+            <a [routerLink]="'/north'">
+              <img src="images/event/pnorth.png" style="width:200px; height:200px; border-radius: 10px;"
+                (mouseover)="changeImage($event, 'images/event/northindia.png')"
+                (mouseout)="changeImage($event, 'images/event/pnorth.png')">
+            </a>
+          </td>
+          <td>
+            <a [routerLink]="'/south'">
+              <img src="images/event/psouth.png" style="width:200px; height:200px; border-radius: 10px;"
+                (mouseover)="changeImage($event, 'images/event/southindia.png')"
+                (mouseout)="changeImage($event, 'images/event/psouth.png')">
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a [routerLink]="'/east'">
+              <img src="images/event/peast.png" style="width:200px; height:200px; border-radius: 10px;"
+                (mouseover)="changeImage($event, 'images/event/eastindia.jpg')"
+                (mouseout)="changeImage($event, 'images/event/peast.png')">
+            </a>
+          </td>
+          <td>
+            <a [routerLink]="'/west'">
+              <img src="images/event/pwest.png" style="width:200px; height:200px; border-radius: 10px;"
+                (mouseover)="changeImage($event, 'images/event/westindia.jpg')"
+                (mouseout)="changeImage($event, 'images/event/pwest.png')">
+            </a>
+          </td>
+        </tr>
+      </table>
+    </div>
+  
+    <a (click)="toggleSpiritual($event)">Monuments</a>
+    <div class="spirituallist" [style.display]="showSpiritual ? 'flex' : 'none'">
+      <table>
+        <tr>
+          <td>
+            <label>
+              <a [routerLink]="'/carvings'">
+                <img src="images/event/divinity.jpg" style="width:200px; height:200px; border-radius:10px; opacity:0.5;"
+                  (mouseover)="changeOpacity($event, 1.0)" (mouseout)="changeOpacity($event, 0.5)">
+              </a> CARVINGS
+            </label>
+          </td>
+          <td>
+            <label>
+              <a [routerLink]="'/historics'">
+                <img src="images/event/taj.jpg" style="width:200px; height:200px; border-radius:10px; opacity:0.5;"
+                  (mouseover)="changeOpacity($event, 1.0)" (mouseout)="changeOpacity($event, 0.5)">
+              </a> HISTORICS
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>
+              <a [routerLink]="'/caves'">
+                <img src="images/event/carve2.jpg" style="width:200px; height:200px; border-radius:10px; opacity:0.5;"
+                  (mouseover)="changeOpacity($event, 1.0)" (mouseout)="changeOpacity($event, 0.5)">
+              </a> CAVES SCULPTURE
+            </label>
+          </td>
+          <td>
+            <label>
+              <a [routerLink]="'/divinity'">
+                <img src="images/event/alagar.jpeg" style="width:200px; height:200px; border-radius:10px; opacity:0.5;"
+                  (mouseover)="changeOpacity($event, 1.0)" (mouseout)="changeOpacity($event, 0.5)">
+              </a> DIVINITY
+            </label>
+          </td>
+        </tr>
+      </table>
+    </div>
+  
+    <a (click)="toggleWild($event)">Wildlife</a>
+    <div class="wildlist" [style.display]="showWild ? 'flex' : 'none'">
+      <table>
+        <tr>
+          <td>
+            <label>
+              <a [routerLink]="'/natpark'">
+                <img src="images/event/natpark.jpg" style="width:200px; height:200px; border-radius:10px;">
+              </a> National Parks
+            </label>
+          </td>
+          <td>
+            <label>
+              <a [routerLink]="'/biores'">
+                <img src="images/event/biores.webp" style="width:200px; height:200px; border-radius:10px;">
+              </a> Biosphere Reserves
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>
+              <a [routerLink]="'/birdsanc'">
+                <img src="images/event/birdsanc.jpg" style="width:200px; height:200px; border-radius:10px;">
+              </a> Bird Sanctuaries
+            </label>
+          </td>
+          <td>
+            <label>
+              <a [routerLink]="'/wildsanc'">
+                <img src="images/event/rhino.jpeg" style="width:200px; height:200px; border-radius:10px;">
+              </a> Wildlife Sanctuaries
+            </label>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </nav>
+  
+  <div class="video-container">
+    <video src="videos/Spiritual.mp4" autoplay loop muted></video>
+  </div>
+  

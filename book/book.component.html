@@ -1,0 +1,112 @@
+<div class="background-wrapper">
+  <header>
+    <h3>GRAB YOUR TICKETS</h3>
+  </header>
+
+  <div *ngIf="user; else loginPrompt" class="overlay">
+    <div class="booking-form">
+      <h2>🙏Welcome, {{ user.username }}!</h2>
+
+      <div class="form-group">
+        <label for="places">Select a place to visit:</label>
+        <select class="select-box" id="places" [(ngModel)]="selectedPlace" (change)="onPlaceChange()">
+          <option value="" disabled selected>Select a place</option>
+          <option *ngFor="let place of places" [value]="place.state">{{ place.state }}</option>
+        </select>
+      </div>
+
+      <div *ngIf="selectedPlace" class="selectedPlace">
+        <h3 class="place">Place to visit: {{ selectedPlace }}</h3>
+        
+        <div class="form-group">
+          <label for="tickets">Number of tickets:</label>
+          <input type="number" id="tickets" [(ngModel)]="numberOfTickets" 
+                 (input)="calculateTotalCost()" min="1" 
+                 [disabled]="editingTicketId !== null" />
+        </div>
+
+        <div class="form-group">
+          <label for="aadhar">Upload Aadhar/PAN Card (PDF max: 5MB):</label>
+          <input type="file" id="aadhar" (change)="onFileChange($event)" accept=".pdf" style="background-color: white;" />
+          <div *ngIf="!aadharFile" class="error-message">Aadhar/PAN Card upload is mandatory.</div>
+        </div>
+
+        <div class="form-group">
+          <h4>Cost per head: {{ costPerHead | currency:'INR' }}</h4>
+          <h4>Total cost: {{ totalCost | currency:'INR' }}</h4>
+        </div>
+        <div class="form-group">
+          <label for="cardno">Enter Card Number</label>
+          <input type="text" id="cardno" [(ngModel)]="cardno" required />
+        </div>
+
+        <div class="form-group">
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" [(ngModel)]="cvv" required />
+        </div>
+
+        <div class="form-group">
+          <label for="expdate">Expiry Date</label>
+          <input type="text" id="expdate" placeholder="MM/YY" [(ngModel)]="expiryDate" required />
+          <div *ngIf="expiryError" class="error-message">{{ expiryError }}</div>
+        </div>
+
+        <div class="form-group">
+          <label for="cost">Payment Amount</label>
+          <input type="text" id="cvv" value="{{ totalCost | currency:'INR' }}" readonly />
+        </div>
+
+        <button class="book-button" (click)="bookTickets()">Book</button>
+        <div *ngIf="bookingMessage">{{ bookingMessage }}</div>
+      </div>
+      <br>
+      <br>
+      <button class="view-button" (click)="viewBookedTickets()">View Booked Tickets</button>
+
+      <div *ngIf="bookedTickets.length > 0">
+        <h3>Your Booked Tickets:</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>State</th>
+              <th>Tickets Count</th>
+              <th>Total Cost</th>
+              <th>Booking Time</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let ticket of bookedTickets">
+              <td>{{ ticket.place }}</td>
+              <td>
+                <input type="number" [(ngModel)]="ticket.tickets" 
+                       [disabled]="editingTicketId !== ticket._id || !isEditable(ticket.bookedAt)" 
+                       (input)="updateTotalCost(ticket)" />
+              </td>
+              <td>{{ ticket.totalCost | currency:'INR' }}</td>
+              <td>{{ ticket.bookedAt | date:'short' }}</td>
+              <td class="actions">
+                <button class="delete-button" (click)="deleteTicket(ticket._id)" 
+                        [disabled]="!isEditable(ticket.bookedAt)">Delete</button>
+
+                <button *ngIf="editingTicketId !== ticket._id" class="edit-button" 
+                        (click)="editTicket(ticket)" 
+                        [disabled]="!isEditable(ticket.bookedAt)">Update</button>
+
+                <button *ngIf="editingTicketId === ticket._id" class="done-button" 
+                        (click)="saveChanges(ticket)">Done</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #loginPrompt>
+    <div>
+      <h3>Please sign in to book tickets.</h3>
+      <button class="view-button" (click)="showSignin()">Sign In</button>
+    </div>
+  </ng-template>
+</div>

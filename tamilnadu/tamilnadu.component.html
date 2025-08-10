@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Explore Tamil Nadu</title>
+    </head>
+    <body>
+        <header>
+            <a href="/home">HOME</a>
+        </header>
+        <div class="titlecontainer">
+            <div class="titleheading"> 
+                Experience Karnataka
+            </div>
+        </div>
+        <div class="titlecontainer">
+            <div class="tagline"> 
+                Where Stories never die......
+            </div>
+        </div>
+        <div class="side">
+         Cities to add to your bucket list
+     </div>
+     <div>
+          <figure class="titlepics-container">
+             <img id="titlepics" src="/images/Tamil Nadu/pilgrim-centres.webp" alt="Places" height="100%" width="100%">
+             <a href="#"><figcaption id="titlecaption">Airavatesvarar Temple</figcaption></a>
+          </figure>
+     </div>
+        <div class="side">
+            Flavours to cherish
+        </div>
+        <div>
+             <figure class="pics-container">
+                <img class="pics" src="/images/Tamil Nadu/Vivekananda Rock.jpeg" alt="Vivekananda Rock" height="300px" width="300px">
+                <a href="#"><figcaption class="caption">Grandeur</figcaption></a>
+             </figure>
+             <figure class="pics-container">
+                <img class="pics" src="/images/Tamil Nadu/mahishasuramardini-cave-temple.webp" alt="mahishasuramardini-cave-temple" height="300px" width="300px">
+                <a href="#"><figcaption class="caption">Heritage</figcaption></a>
+             </figure>
+             <figure class="pics-container">
+                <img class="pics" src="/images/Tamil Nadu/suchindram-shree-thanumalayan-swamy-temple.webp" alt="suchindram" height="300px" width="300px">
+                <a href="#"><figcaption class="caption">Spiritual</figcaption></a>
+             </figure>
+             <figure class="pics-container">
+                <img class="pics" src="/images/Tamil Nadu/pykara-ooty.webp" alt="pykara-ooty" height="300px" width="300px">
+                <a href="#"><figcaption class="caption">Tranquility</figcaption></a>
+             </figure>
+             <figure class="pics-container">
+                <img class="pics" src="/images/Tamil Nadu/Bharathanatyam.jpg" alt="Bharathanatyam" height="300px" width="300px">
+                <a href="#"><figcaption class="caption">Art Forms</figcaption></a>
+             </figure>
+             <figure class="pics-container">
+                <img class="pics" src="/images/Tamil Nadu/anamalai-tiger-reserve.webp" alt="Tiger" height="300px" width="300px">
+                <a href="#"><figcaption class="caption">Wild</figcaption></a>
+             </figure>
+        </div>                              
+    </body>
+</html>
+<script>
+    setInterval(changeImage,2000);
+let currentIndex = 0;
+const images = [
+        { src: '/images/Tamil Nadu/pilgrim-centres.webp', caption: 'Airavatesvarar Temple' },
+        { src: '/images/Tamil Nadu/kanyakumari.webp', caption: 'Kanyakumari' },
+        { src: '/images/Tamil Nadu/m-n-chocolate-museum-ooty.webp', caption: 'Chocolate Museum' },
+        { src: '/images/Tamil Nadu/pamban-bridge.jpg', caption: 'Pamban Bridge' }, 
+        { src: '/images/Tamil Nadu/mamallapuram-shore-temple.webp', caption: 'Mamallapuram Shore Temple' },
+        { src: '/images/Tamil Nadu/monuments.webp', caption: 'Mahabalipuram Shore Temple' },
+        { src: '/images/Tamil Nadu/kanyakumari-wax-museum.webp', caption: 'Wax Museum' },
+        { src: '/images/Tamil Nadu/scuba-diving-ecrchennai.webp', caption: 'ECR Chennai' },  
+        { src: '/images/Tamil Nadu/the-mudumalai-national-park.webp', caption: 'Mudumalai National Park' },       
+    ];
+    function changeImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        document.getElementById('titlepics').src = images[currentIndex].src;
+        document.getElementById('titlecaption').innerText = images[currentIndex].caption;
+    }
+
+</script>

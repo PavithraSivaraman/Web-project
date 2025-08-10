@@ -1,0 +1,97 @@
+/* home-loan-calculator.component.css */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap'); */
+
+/* Apply the Poppins font */
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 30px;
+    color: #333;
+  }
+  
+  .loan-container {
+    display: flex;
+    gap: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+  }
+  
+  .left-panel, .right-panel {
+    flex: 1;
+  }
+  
+  .left-panel {
+    border-right: 1px solid #ddd;
+  }
+  
+  .btn-apply {
+    background-color: #004b87;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background 0.3s;
+  }
+  
+  .btn-apply:hover {
+    background-color: #0063b1;
+  }
+  
+  .calculator h2 {
+    margin-bottom: 20px;
+    color: #004b87;
+  }
+  
+  input[type="range"] {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  .result p {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #444;
+  }
+  
+  .doc-table {
+    width: 80%;
+    margin: 40px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .doc-table th, .doc-table td {
+    padding: 14px;
+    border: 1px solid #ddd;
+    text-align: left;
+    background: #fff;
+  }
+  
+  .doc-table th {
+    background-color: #004b87;
+    color: white;
+  }
+  
+  .doc-table tr:hover {
+    background-color: #eaf3fb;
+  }
+  

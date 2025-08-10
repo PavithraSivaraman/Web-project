@@ -1,0 +1,45 @@
+body, .container {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(90deg, #ffffff);
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #000000;
+  }
+  
+  button#bid {
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #664caf;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .event {
+    background: rgb(224, 241, 245);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 15px;
+  }
+  
+  .event h2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #0f1275;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: inline-block;
+  }
+  
+  .event p {
+    margin: 5px 0;
+  }
+  

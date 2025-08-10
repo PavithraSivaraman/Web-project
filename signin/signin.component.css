@@ -1,0 +1,106 @@
+.container3
+{
+    display:flex;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    width:700px;
+    height:400px;
+    position: relative;
+    margin: 0 auto;
+}
+.img-cont {
+   position: relative;
+   width:50%;
+   height:100%;
+}
+#reload-captcha {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+#captcha-text
+{
+    margin-left:100px;
+    color:black;
+    font-size:15px;
+}
+.img-cont img {    
+    width: 100%;
+    height: 100%;
+}
+
+.info-cont{
+    background-color:rgb(209, 204, 204);
+    width: 50%; 
+    height: 100%;
+}
+.frm{
+    display:block;
+}
+.info-cont h2
+{
+   margin-top:5px;
+   margin-left:105px;
+   font-size:25px;
+   color:black;
+}
+.fm input {
+    /* to display the content inside box one by one */
+    display: block;
+    width: 80%;
+    margin: 10px 0;
+    padding: 6px;
+    margin-left:35px;
+    color:black;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.fm label{
+    margin-top:1px;
+    margin-left:35px;
+    color:black;
+    font-size:15px;
+}
+.btn
+{
+    width:90px;
+    height:35px;
+    padding:10px;
+    margin-left:120px;
+    margin-top:8px;
+    background-color:orangered;
+    border:none;
+    outline:none;
+    border-radius:20px;
+}
+#sign
+{
+    color:black;
+    font-size:16px;
+    margin-left:100px;
+    margin-top:8px;
+
+}
+#sign_in
+{
+    margin-left:70px;
+    color:black;
+    font-size:16px;
+}
+#sign a{
+    text-decoration: none;
+}
+.back-btn {
+    margin-top: 10px;
+    background-color: #ccc;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+  

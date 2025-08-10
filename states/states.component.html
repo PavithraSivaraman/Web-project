@@ -1,0 +1,54 @@
+<header class="header">
+    <h2 class="heading">Start your journey Here</h2>
+  </header>
+  
+  <div class="logo-container">
+    <a routerLink="/">
+      <img src="images/Website-logo.jpg" alt="logo" class="logo">
+    </a>
+  </div>
+  
+  <nav class="navigation">
+    <ul class="navlinks">
+      <li><a routerLink="/book" class="nav-link">Plan your trip</a></li>
+      <li><a routerLink="/events" class="nav-link">Travel Guide</a></li>
+      <li class="back"><a href="/home" class="nav-link">BACK</a></li>
+    </ul>
+  </nav>
+  
+  <div class="s1">
+    STATES TO VISIT....IGNITE THE TRAVEL MONK WITHIN YOU
+  </div>
+  
+  <div class="pictures">
+    <figure class="pics-container" *ngFor="let place of places">
+      <img [src]="place.img" [alt]="place.name" class="pics">
+      <a [routerLink]="place.link">
+        <figcaption class="caption">{{ place.name }}</figcaption>
+      </a>
+    </figure>
+  </div>
+  <br>
+  <br>
+  <footer>
+    <div class="footer-heading">CONTACT US</div>
+    <div class="footer-content">
+      <table>
+        <tbody>
+          <tr>
+            <td><img src="images/ICONS/icons8-gmail-48.png" alt="Gmail"></td>
+            <td><img src="images/ICONS/facebook.png" alt="Facebook"></td>
+            <td><img src="images/ICONS/icons8-twitter-50.png" alt="Twitter"></td>
+            <td><img src="images/ICONS/4375133_logo_youtube_icon.png" alt="YouTube"></td>
+          </tr>
+          <tr>
+            <td><a href="https://www.gmail.com" target="_blank">G-mail</a></td>
+            <td><a href="https://www.facebook.com" target="_blank">Facebook</a></td>
+            <td><a href="https://www.twitter.com" target="_blank">Twitter</a></td>
+            <td><a href="https://www.youtube.com" target="_blank">Youtube</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </footer>
+  

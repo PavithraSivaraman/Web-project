@@ -1,0 +1,16 @@
+<div class="container">
+    <h1>Upcoming Events in North India</h1>
+    <button id="bid" (click)="toggleDetails()">
+      {{ showDetails ? 'Hide details' : 'Show details' }}
+    </button>
+  
+    <div class="event" *ngFor="let event of events">
+      <h2>{{ event.title }}</h2>
+      <div class="indiv" [style.visibility]="showDetails ? 'visible' : 'hidden'">
+        <p><strong>Date:</strong> {{ event.date }}</p>
+        <p><strong>Location:</strong> {{ event.location }}</p>
+        <p><strong>Description:</strong> {{ event.description }}</p>
+      </div>
+    </div>
+  </div>
+  

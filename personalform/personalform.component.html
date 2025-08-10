@@ -1,0 +1,60 @@
+<div class="registration-container">
+    <div class="left-panel">
+      <div class="overlay-text">
+        <h3>PERSONAL LOAN</h3>
+      </div>
+    </div>
+  
+    <div class="right-panel">
+      <div class="form-box">
+        <h2>Personal Loan Registration</h2>
+        <p class="subheading">Your trusted loan partner</p>
+  
+        <form (ngSubmit)="onSubmit()" #loanForm="ngForm">
+          <input type="text" name="fullName" placeholder="Full Name" [(ngModel)]="user.fullName" required />
+          <input type="email" name="email" placeholder="Email Address" [(ngModel)]="user.email" required />
+          <input type="tel" name="phone" placeholder="Phone Number" [(ngModel)]="user.phone" required />
+  
+          <input type="number" name="amount" placeholder="Loan Amount Requested" [(ngModel)]="user.amount" required />
+  
+          <select name="term" [(ngModel)]="user.term" required>
+            <option value="" disabled selected>Select Loan Term</option>
+            <option value="1">1 Year</option>
+            <option value="2">2 Years</option>
+            <option value="3">3 Years</option>
+            <option value="4">4 Years</option>
+            <option value="5">5 Years</option>
+          </select>
+  
+          <select name="employmentStatus" [(ngModel)]="user.employmentStatus" required>
+            <option value="" disabled selected>Employment Status</option>
+            <option value="employed">Employed</option>
+            <option value="self-employed">Self-Employed</option>
+            <option value="unemployed">Unemployed</option>
+          </select>
+  
+          <input type="text" name="employerName" placeholder="Employer's Name" [(ngModel)]="user.employerName" />
+  
+          <input type="number" name="monthlyIncome" placeholder="Monthly Income" [(ngModel)]="user.monthlyIncome" required />
+  
+          <input type="text" name="loanPurpose" placeholder="Purpose of Loan" [(ngModel)]="user.loanPurpose" required />
+  
+          <div class="form-group">
+            <label for="idProof">Upload ID Proof:</label>
+            <input type="file" name="idProof" accept=".pdf,.jpg,.jpeg,.png" required />
+          </div>
+  
+          <div class="form-group">
+            <label for="incomeProof">Upload Income Proof:</label>
+            <input type="file" name="incomeProof" accept=".pdf,.jpg,.jpeg,.png" required />
+          </div>
+  
+          <div class="action-buttons">
+            <button type="button" class="cancel">Cancel</button>
+            <button type="submit" class="confirm">Submit Application</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

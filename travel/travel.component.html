@@ -1,0 +1,37 @@
+<header>
+  <a routerLink="/home">HOME</a>
+</header>
+
+<div class="titlecontainer">
+  <div class="titleheading">
+    Experience Kerala
+  </div>
+</div>
+
+<div class="titlecontainer">
+  <div class="tagline">
+    God's Own Country
+  </div>
+</div>
+
+<div class="side">
+  Cities to add to your bucket list
+</div>
+
+<div>
+  <figure class="titlepics-container">
+    <img [src]="currentImage.src" alt="Places" height="100%" width="100%">
+    <a href="#"><figcaption id="titlecaption">{{ currentImage.caption }}</figcaption></a>
+  </figure>
+</div>
+
+<div class="side">
+  Flavours to cherish
+</div>
+
+<div>
+  <figure class="pics-container" *ngFor="let place of places">
+    <img class="pics" [src]="place.src" [alt]="place.alt" height="300px" width="300px">
+    <a href="#"><figcaption class="caption">{{ place.caption }}</figcaption></a>
+  </figure>
+</div>

@@ -1,0 +1,155 @@
+<h1>ADMIN DASHBOARD</h1>
+
+<div class="summary">
+    <div class="summary-card">
+        <h2>Total Users</h2>
+        <p>{{ users.length }}</p>
+    </div>
+    <div class="summary-card">
+        <h2>Total Tickets</h2>
+        <p>{{ tickets.length }}</p>
+    </div>
+    <div class="summary-card">
+        <h2>Total Revenue</h2>
+        <p>{{ grandTotalRevenue | currency:'INR' }}</p>
+    </div>
+    <div class="summary-card">
+        <h2>Total Places</h2>
+        <p>{{ totalPlaces }}</p>
+    </div>
+</div>
+
+<div class="half add-place-section">
+    <div class="button-container">
+        <button (click)="toggleAddPlaceForm()">
+            {{ showAddPlaceForm ? 'Cancel' : 'Add Place' }}
+        </button>
+    </div>
+
+    <div *ngIf="showAddPlaceForm">
+        <div class="form-group">
+            <label for="state">State:</label>
+            <input type="text" id="state" [(ngModel)]="newPlace.state" placeholder="Enter state" />
+        </div>
+        <div class="form-group">
+            <label for="cost">Cost per Head:</label>
+            <input type="number" id="cost" [(ngModel)]="newPlace.cost" placeholder="Enter cost" min="1000"/>
+        </div>
+        <div class="button-container">
+            <button (click)="addPlace()">Add Place</button>
+        </div>
+    </div>
+</div>
+
+<div class="half view-places-section">
+    <div class="button-container">
+        <button (click)="viewPlaces()" *ngIf="!isViewingPlaces">View Places</button>
+        <button (click)="closeView()" *ngIf="isViewingPlaces">Close</button>
+    </div>
+    <div class="table-container" *ngIf="isViewingPlaces && places.length > 0">
+        <table>
+            <thead>
+                <tr>
+                    <th>State</th>
+                    <th>Cost per Head</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let place of places">
+                    <td>{{ place.state }}</td>
+                    <td>
+                        <input type="number" [(ngModel)]="place.costPerHead" [disabled]="!place.isEditing" />
+                    </td>
+                    <td>
+                        <button class="update-button-container" (click)="updatePlace(place)" *ngIf="!place.isEditing">Update</button>
+                        <button class="done-button-container" (click)="doneUpdating(place)" *ngIf="place.isEditing">Done</button>
+                        <br />
+                        <button class="delete-button-container" (click)="deletePlace(place._id)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="half top-half">
+    <div class="button-container">
+        <button (click)="viewUsers()" *ngIf="!isViewingUsers">View Users</button>
+        <button (click)="closeView()" *ngIf="isViewingUsers">Close</button>
+    </div>
+    <div class="table-container" *ngIf="isViewingUsers && users.length > 0">
+        <table>
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users">
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.email }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="half bottom-half">
+    <div class="button-container">
+        <button (click)="viewTickets()" *ngIf="!isViewingTickets">View Tickets</button>
+        <button (click)="closeView()" *ngIf="isViewingTickets">Close</button>
+    </div>
+    <div class="table-container" *ngIf="isViewingTickets && tickets.length > 0">
+        <table>
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Place</th>
+                    <th>Tickets</th>
+                    <th>Total Cost</th>
+                    <th>Booked At</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let ticket of tickets">
+                    <td *ngIf="ticket.user">{{ ticket.user.username }} ({{ ticket.user.email }})</td>
+                    <td *ngIf="!ticket.user">User information not available</td>
+                    <td>{{ ticket.place }}</td>
+                    <td>{{ ticket.tickets }}</td>
+                    <td>{{ ticket.totalCost | currency:'INR' }}</td>
+                    <td>{{ ticket.bookedAt | date:'short' }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<h2>Revenue Report</h2>
+<div class="half bottommost-half">
+    <div class="button-container">
+        <button (click)="viewRevenue()" *ngIf="!isViewingRevenue">Report</button>
+        <button (click)="closeView()" *ngIf="isViewingRevenue">Close</button>
+    </div>
+    <div class="table-container" *ngIf="isViewingRevenue && grandTotalRevenue > 0">
+        <table>
+            <thead>
+                <tr>
+                    <th>State</th>
+                    <th>Tickets</th>
+                    <th>Total Revenue</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let revenue of revenueData">
+                    <td>{{ revenue.place }}</td>
+                    <td>{{ revenue.totalTickets }}</td>
+                    <td>{{ revenue.totalRevenue | currency:'INR' }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Overall Total Tickets: {{ overallTotalTickets }}</h3>
+        <h3>Grand Total Revenue: {{ grandTotalRevenue | currency:'INR' }}</h3>
+    </div>
+</div>
