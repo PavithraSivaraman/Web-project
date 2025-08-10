@@ -1,0 +1,146 @@
+.header {
+    height: 100px;
+    background-color: rgb(150, 189, 245);
+    position: relative;
+  }
+  
+  .heading {
+    color: rgb(7, 15, 71);
+    font-family: Verdana;
+    font-size: xx-large;
+    position: absolute;
+    left: 450px;
+    top: 25px;
+  }
+  
+  .logo-container {
+    position: absolute;
+    left: 100px;
+    top: 45px;
+  }
+  
+  .logo {
+    height: 50px;
+    width: 80px;
+    background: transparent;
+    border-radius: 20px;
+  }
+  
+  .navigation .navlinks {
+    display: flex;
+    position: absolute;
+    left: 900px;
+    top: 40px;
+    list-style: none;
+    gap: 30px;
+    font-family: Verdana;
+    font-size: larger;
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+  }
+  .back
+  {
+    top: 30px;
+    font-family: Georgia;
+    font-size:x-large;
+    font-weight: bolder;
+    text-decoration:underline;
+    text-decoration-color: aliceblue;
+  }
+  .s1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .pics-container {
+    display: inline-block;
+    position: relative;
+    width: 320px;
+    height: 320px;
+    margin-left: 80px;
+  }
+  
+  .pics {
+    width: 300px;
+    height: 300px;
+    margin: 0 30px 30px 30px;
+    border-radius: 10px;
+    border-width: 2px;
+  }
+  
+  .pics:hover {
+    border-radius: 50px;
+    width: 320px;
+    height: 320px;
+    border: 2px solid black;
+  }
+  
+  .caption {
+    position: relative;
+    bottom: 0;
+    left: 20px;
+    width: 100%;
+    background-color: rgba(5, 11, 122, 0.918);
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-size: 1.2em;
+    border-radius: 10px;
+  }
+  
+  .caption:hover {
+    background-color: rgb(2, 2, 36);
+  }
+  .s1{
+    display: flex;
+    color: rgb(4, 4, 50);
+    font-size: xx-large;
+    font-weight: bold;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-heading {
+    background-color: rgb(8, 3, 26);
+    bottom: 0px;
+    color: azure;
+    text-align: center;
+    font-size: x-large;
+    padding: 20px;
+    font-family: Verdana;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(176, 185, 216, 0.818);
+    padding: 20px;
+  }
+  
+  table {
+    width: 25%;
+  }
+  
+  td {
+    width: 80px;
+    text-align: center;
+    background-color: white;
+    border-radius: 100px;
+  }
+  
+  td a {
+    text-decoration: underline;
+    color: black;
+  }
+  
+  td img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+  }
+  

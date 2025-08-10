@@ -1,0 +1,7 @@
+<h1>The Grand Architecture of India</h1>
+<p>Click on the Architecture to know more</p>
+<div class="carving" *ngFor="let carving of carvings" (click)="showDetails(carving)">
+    <h2>{{carving.title}}</h2>
+    <p>{{carving.description}} <b>{{carving.famousFor}}</b></p>
+  </div>
+  

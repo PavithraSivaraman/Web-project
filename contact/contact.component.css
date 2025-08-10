@@ -1,0 +1,274 @@
+
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap'); */
+
+* {
+    font-family: "Open Sans", sans-serif;
+}
+
+body
+{
+    margin:0;
+    padding:0;
+    /* background:url('../image/homepage.png') no-repeat center center/cover;  */
+    font-family: "Open Sans", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+.header-class
+{  
+    opacity: 0.8;
+          
+    top: 0;               
+    left: 0;              
+    width: 100%; 
+   
+    margin-bottom:0px;
+    background-color:black;
+    color:aliceblue;
+    display:flex;
+    justify-content: space-between;
+    z-index: 10;
+    height: 50px;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color:white;
+    
+}
+.logo span {
+    color: red;
+}
+nav 
+{
+    justify-content: flex-start;
+    display: flex;
+    /* align for vertical center   justify is for horizontal */
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+}
+.nav ul
+{
+    /* list style is to remove the dots in the ul */
+    list-style: none;    
+    display: flex;
+}
+.nav ul li
+{
+    /* margin: TOP RIGHT BOTTOM LEFT; */
+    margin: 3px 15px 0px 40px;
+    gap: 5px;
+}
+.nav ul li a
+{
+    
+   /* it is to remove the underline in the ul */
+    text-decoration: none;
+    color:white;
+    font-size:13px;  
+}
+.contact-btn
+{
+    display:flex;
+}
+.phone
+{
+    align-items: center;
+    font-size: 13px;
+    background-color: rgba(74, 72, 72, 0.902);
+    color:white;
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+    width: 150px;
+}
+.no
+{
+    align-items: center;
+    background-color: orangered;
+    color:bisque;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+}
+.cont img{
+    width:1087px;
+    height:230px;
+}
+.conatct
+{
+    z-index:10;
+}
+.container
+{
+    display:flex;
+    margin-left:70px;
+}
+.left
+{
+    position:relative;
+    margin-top:50px;
+    width:400px;
+    height:500px;  
+    justify-content:center;
+}
+
+.image-container img{
+    margin-top:30px;
+    width: 25px; 
+    height: 25px;
+    display:block;
+}
+.info-container
+{
+    display:flex;
+}
+.left p
+{   
+    line-height: 1.9;
+    margin-top:40px;
+    color:grey;
+    font-size:12px;
+}
+.ul{
+    margin-top:5px;
+}
+.ul ul li {
+    list-style: none; 
+    display:block;
+    padding: 20px 0;
+    /* line-height: 4.5; */
+    /* to give space between the li elements use line-height or padding */
+    text-decoration-line: none;
+    font-size:12px;
+}
+
+.form
+{
+    /* padding: [top] [right] [bottom] [left]; */
+
+    padding:70px 0px;
+    line-height: 2.5;
+}
+
+
+.form input {
+    /* to display the content inside box one by one */
+    display: block;
+    /* width: 300px; */
+    /* distance btw the input elements */
+    margin: 20px 0;
+    /* distance inside the container and text */
+    padding: 15px;
+    background-color:rgb(208, 208, 208);
+    border: none; 
+    outline: none;
+   
+}
+#msg 
+{
+    text-align:left;
+}
+
+.name
+{
+    display:flex;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.name input{
+    width: 250px;
+    margin: 0 20px;
+}
+.name input[type="email"] {
+    width: 360px; /* Width for email */
+}
+
+.subject input
+{
+    width: 680px !important;
+    margin:  20px; 
+}
+#msg input{
+ 
+    width: 542px;
+    margin:  20px;
+    padding:85px;
+    
+}
+#sub 
+{ 
+    margin-top:45px;
+    margin-left:20px;
+    border-radius:30px;
+    color:white;
+    background-color:orangered;
+    border: none;
+    cursor: pointer;
+    width:130px;
+    height:45px;
+    font-size:9px;
+    font-weight:bold;
+}
+
+
+/* Footer section */
+.last
+{
+    padding:30px;
+        background: #22242b;
+}
+
+.last ul li{
+        list-style:none;
+        font-size: 12px;
+        color: #ffffff;
+        margin-bottom: 15px;    
+}
+.foot-cont
+{
+    margin-top:30px;
+
+    display:flex;
+}
+.box1
+{
+    margin-left:30px;
+}
+.box2
+{
+    margin-left:95px;
+}
+.box3
+{
+    margin-left:110px;
+}
+.box4
+{
+    margin-left:160px;
+}
+.foot-cont h2 {
+	font-size: 16px;
+	font-weight: 700;
+	margin-bottom: 30px;
+	color: #fff;
+}
+
+.logo {
+
+    font-size: 20px;
+    color:white;  
+}
+.logo span {
+    color: red;
+}
+.copy
+{
+    color:rgb(116, 117, 123);
+    margin-top:80px;
+    text-align:left;
+    font-size:14px;
+}

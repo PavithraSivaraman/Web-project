@@ -1,0 +1,70 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+  }
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/img/login.avif');
+    background-size: cover;
+    margin: 0;
+    padding: 20px;
+    color: #444;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+  }
+  
+  .container:hover {
+    transform: scale(1.02);
+  }
+  
+  h1, h2 {
+    text-align: center;
+    color: #007BFF;
+  }
+  
+  label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  
+  input, select, button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    background: linear-gradient(90deg, #007BFF, #0056b3);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  button:hover {
+    background: linear-gradient(90deg, #0056b3, #007BFF);
+  }
+  
+  .result-section .amount {
+    font-size: 2em;
+    color: #007BFF;
+  }
+  
+  footer {
+    background: #0056b3;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  

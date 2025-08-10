@@ -1,0 +1,58 @@
+<body>
+    <nav>
+       
+        
+        <input type="button" (click)="openModal1()" id="id" value="Monuments">
+        <div id="modal2" class="overlay" [style.display]="modalVisible ?'flex':'none'">
+            <button type="button" (click)="closeModal()" class="close" >X</button>
+        <div class="container3" id="id"> 
+            <table>
+            <tr>
+                <td><label><a href="/carvings"><img src="/images/event/divinity.jpg" alt="Carvings" style="width:200px; height:200px;border-radius: 10px;opacity: 0.50;"onMouseOver="opaque(this,1.0)" onMouseout="opaque(this,0.50)" ></a> CARVINGS</label></td>
+                <td><label><a href="/historics"><img src="/images/event/taj.jpg" alt="Historics" style="width:200px; height:200px;border-radius: 10px;opacity: 0.50"onMouseOver="opaque(this,1.0)" onMouseout="opaque(this,0.50)"> </a>HISTORICS</label></td>
+            </tr>
+            <tr>
+                <td><label><a href="/caves"><img src="/images/event/carve2.jpg" alt="Caves Sculpture" style="width:200px; height:200px;border-radius: 10px;opacity: 0.50"onMouseOver="opaque(this,1.0)" onMouseout="opaque(this,0.50)"> </a>CAVES SCULPTURE</label></td>
+                <td><label><a href="/divinity"><img src="/images/event/alagar.jpeg" alt="Divinity" style="width:200px; height:200px;border-radius: 10px;opacity: 0.50"onMouseOver="opaque(this,1.0)" onMouseout="opaque(this,0.50)"></a> DIVINITY </label></td>
+            </tr>
+            </table>
+        </div>
+        </div>
+    
+       <input type="button" (click)="openModal2()" id="wwid" value="Wildlife">
+        <div id="modal3" class="overlay" [style.display]="modalVisible ?'flex':'none'">
+            <button type="button" (click)="closeModal2()" class="close" >X</button>
+        <div class="container3" id="wwid"> 
+            <table>
+            <tr>
+                <td><label><a href="/natpark"><img src="/images/event/natpark.jpg" alt="National Parks" style="width:200px; height:200px;border-radius: 10px;"></a> National parks</label></td>
+                <td><label><a href="/biores"><img src="/images/event/biores.webp" alt="Biosphere Reserves" style="width:200px; height:200px;border-radius: 10px;"></a> Biosphere reserves</label></td>
+            </tr>
+            <tr>
+                <td><label><a href="/birdsanc"><img src="/images/event/birdsanc.jpg" alt="Bird Sanctuaries" style="width:200px; height:200px;border-radius: 10px;"> </a>Bird sanctuaries</label></td>
+                <td><label><a href="/wildsanc"><img src="/images/event/rhino.jpeg" alt="Wildlife Sanctuaries" style="width:200px; height:200px;border-radius: 10px;"></a> Wildlife sanctuaries </label></td>
+            </tr>
+            </table>
+        </div>
+        </div>
+        <input type="button" (click)="openModal()" id="rid" value="Events">
+        <div id="modal1" class="overlay" [style.display]="modalVisible ?'flex':'none'">
+        <button type="button" (click)="closeModal()" class="close" >X</button>
+        <div class="container1" id="rid"> 
+            <table>
+            <tr>
+                <td><a href="/north"><img src="/images/event/pnorth.png" style="width:200px; height:200px; border-radius: 10px;" onMouseOver="show(this,'../images/event/northindia.png')" onMouseout="show(this,'../images/event/pnorth.png')"></a> </td>
+                <td><a href="/south"><img src="/images/event/psouth.png" alt="South" style="width:200px; height:200px;border-radius: 10px;"onMouseOver="show(this,'../images/event/southindia.png')" onMouseout="show(this,'../images/event/psouth.png')"></a></td>
+            </tr>
+            <tr>
+                <td><a href="/east"><img src="/images/event/peast.png" alt="East" style="width:200px; height:200px;border-radius: 10px;"onMouseOver="show(this,'../images/event/eastindia.jpg')" onMouseout="show(this,'../images/event/peast.png')"> </a></td>
+                <td><a href="/west"><img src="/images/event/pwest.png" alt="West" style="width:200px; height:200px;border-radius: 10px;"onMouseOver="show(this,'../images/event/westindia.jpg')" onMouseout="show(this,'../images/event/pwest.png')"> </a></td>
+            </tr>
+        </table>
+        </div>
+        </div>
+    </nav>
+    <div class="video-container">
+        <video src="/videos/Spiritual.mp4" autoplay loop muted></video>  
+    </div>
+</body>

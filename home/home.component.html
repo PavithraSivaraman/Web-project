@@ -1,0 +1,120 @@
+<div class="video-container">
+  <video src="videos/Nature.mp4" autoplay loop muted></video>
+</div>
+
+<div class="content">
+  <img src="images/Travel-India.jpg" alt="Travel India" width="400px" height="525px" style="margin-right: 20px;">
+  <p class="paragraph-content" style="flex: 1;">
+    India is one of the popular tourist destinations in Asia. India has fascinated people from all over the world with her secularism and her culture. Bounded by the Himalayan ranges in the north and surrounded, on three sides by sea (Arabian sea, Bay of Bengal and Indian Ocean), India offers a visual treat to the visitors with her breathtaking irreplaceable natural beauty. The enchanting backwaters, hill stations and landscapes make India a country worth visiting.The historical monuments and places of religious interests showcases the rich heritage and architecture of India which makes one spellbound. Every region displays its own unique and exotic handicraft, fairs, folk dances, music, heritage and culture which depicts India vast ,rich and varied diversity.
+  </p>
+  <img src="images/Explore%20india.jpg" alt="Travel India" width="400px" height="525px" style="margin-left: 20px;">
+</div>
+
+<div style="position: absolute; left: 100px; top: 90px;">
+  <a href="#" class="logo">
+    <img src="images/Website-logo.jpg" alt="logo" style="height: 50px; width: 80px; background: transparent; border-radius: 20px;">
+  </a>
+</div>
+
+<h2 id="recent-heading">RECENT CELEBRATIONS TO WITNESS</h2>
+
+<figure class="recent-images" style="margin-left: 15%;">
+  <img src="images/Mahakumbh 20205.jpeg" alt="Mahakumbh 2025" class="images">
+  <a href="#"><figcaption class="caption">MahaKumbh Mela 2025</figcaption></a>
+</figure>
+
+<figure class="recent-images">
+  <img src="images/Holi%202025.jpeg" alt="Holi 2025" class="images">
+  <a href="#"><figcaption class="caption">Holi 2025</figcaption></a>
+</figure>
+
+<figure class="recent-images">
+  <img src="images/Sivaratri.jpeg" alt="Sivaratri 2025" class="images">
+  <a href="#"><figcaption class="caption">Maha Sivaratri 2025</figcaption></a>
+</figure>
+
+<button class="login-button" (click)="showSignup()" type="button">Log in</button>
+<button class="signin-button" (click)="showSignin()" type="button">Sign in</button>
+<button class="logout-button" (click)="logout()" *ngIf="user" type="button">Logout</button>
+
+<nav class="navigation">
+  <ul class="navlinks">
+    <li><a href="/states" style="color: white;">Destination</a></li>
+    <li *ngIf="!isAdmin"><a href="/book" style="color: white;">Plan your trip</a></li> 
+    <li><a href="/events" style="color: white;">Travel Guide</a></li>
+    <li><a routerLink="/myprofile" style="color: white;">My Profile</a></li>
+  </ul>
+</nav>
+
+<!-- Signup Form -->
+<div [class.hidden]="!isSignupVisible" class="login-page">
+  <form (ngSubmit)="onSignup()">
+    <div class="form-group">
+      <input type="text" id="username" name="username" [(ngModel)]="signupData.username" required>
+      <label for="username">Username</label>
+    </div>
+    <div class="form-group">
+      <input type="email" id="email" name="email" [(ngModel)]="signupData.email" required>
+      <label for="email">E-Mail Id</label>
+    </div>
+    <div class="form-group">
+      <input type="password" id="password" name="password" [(ngModel)]="signupData.password" required>
+      <label for="password">Password</label>
+    </div>
+    <div class="form-group">
+      <input type="date" id="dob" name="dob" [(ngModel)]="signupData.dob" required>
+      <label>Date of Birth</label>
+      <div *ngIf="dobError" style="color: red;">{{ dobError }}</div>
+    </div>
+    <div class="agree">
+      <input type="checkbox" [(ngModel)]="signupData.agree" name="agree" required>
+      <label style="color: white; font-family: Verdana; font-size: 14px;">I agree to the terms and conditions</label>
+      <div *ngIf="checkboxError" style="color: red;">{{ checkboxError }}</div>
+    </div>
+    <br>
+    <div *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</div> 
+    <button type="submit">Sign Up</button>
+    <div class="form-group">
+      <a href="#" (click)="showSignin()" style="color: azure;">Already have an account? Sign in</a>
+    </div>
+  </form>
+</div>
+<!-- Signin Form -->
+<div [class.hidden]="!isSigninVisible" class="login-page">
+  <h2>Sign In</h2>
+  <form (ngSubmit)="onSignin()">
+    <div class="form-group">
+      <input type="email" id="email-signin" name="email" [(ngModel)]="signinData.email" required>
+      <label for="email-signin">E-Mail Id</label>
+    </div>
+    <div class="form-group">
+      <input type="password" id="password-signin" name="password" [(ngModel)]="signinData.password" required>
+      <label for="password-signin">Password</label>
+    </div>
+    <button type="submit">Sign In</button>
+    <div class="form-group">
+      <a href="#" (click)="showSignup()" style="color: azure;">Don't have an account? Sign up</a>
+    </div>
+  </form>
+</div>
+<footer>
+  <div class="footer-header">CONTACT US</div>
+  <div class="footer-content">
+    <table>
+      <tbody>
+        <tr>
+          <td><img src="images/ICONS/icons8-gmail-48.png" width="50px" height="50px"></td>
+          <td><img src="images/ICONS/facebook.png" width="50px" height="50px"></td>
+          <td><img src="images/ICONS/icons8-twitter-50.png" width="50px" height="50px"></td>
+          <td><img src="images/ICONS/4375133_logo_youtube_icon.png" width="50px" height="50px"></td>
+        </tr>
+        <tr>
+          <td><a href="https://www.gmail.com" target="_blank">G-mail</a></td>
+          <td><a href="https://www.facebook.com" target="_blank">Facebook</a></td>
+          <td><a href="https://www.twitter.com" target="_blank">Twitter</a></td>
+          <td><a href="https://www.youtube.com" target="_blank">Youtube</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </footer>

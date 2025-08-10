@@ -1,0 +1,139 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+  }
+  
+  .registration-container {
+    display: flex;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+  }
+  
+  .left-panel {
+    flex: 1;
+    background: url('/img/key2.jpg') center center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 2rem;
+  }
+  
+  .overlay-text {
+    text-align: center;
+  }
+  
+  .overlay-text h1 {
+    font-size: 2rem;
+    margin: 0.3rem 0;
+  }
+  
+  .overlay-text h3 {
+    font-weight: 400;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    opacity: 0.9;
+  }
+  
+  .right-panel {
+    flex: 1;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    overflow-y: auto; /* Allow vertical scrolling */
+  }
+  
+  .form-box {
+    width: 100%;
+    max-width: 360px;
+    margin-bottom: 2rem;
+    overflow-y: auto; /* Enable scrolling for content that doesn't fit */
+    max-height: 100%; /* Ensure content fits inside */
+  }
+  
+  .form-box h2 {
+    color: #00796b;
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+  }
+  
+  .subheading {
+    margin-bottom: 1.2rem;
+    color: #888;
+    font-size: 0.9rem;
+  }
+  
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="tel"],
+  form input[type="number"],
+  form select {
+    width: 100%;
+    padding: 0.55rem 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.85rem;
+  }
+  
+  form select {
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 0.65rem auto;
+  }
+  
+  form input[type="text"]::placeholder,
+  form input[type="email"]::placeholder,
+  form input[type="tel"]::placeholder,
+  form input[type="number"]::placeholder,
+  form input[type="date"]::placeholder {
+    color: #080404; /* Light grey placeholder color */
+    font-size: 0.85rem;
+  }
+  
+  select::placeholder {
+    color: #999; /* Light grey for the placeholder */
+  }
+  
+  /* For file input fields */
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  input[type="file"] {
+    width: 100%;
+    padding: 0.55rem 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.85rem;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  
+  button {
+    padding: 0.5rem 1.4rem;
+    border-radius: 5px;
+    font-weight: 600;
+    border: none;
+    font-size: 0.85rem;
+    cursor: pointer;
+  }
+  
+  .cancel {
+    background-color: #2c2c4d;
+    color: white;
+  }
+  
+  .confirm {
+    background-color: #00bfa6;
+    color: white;
+  }
+  

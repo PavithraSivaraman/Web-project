@@ -1,0 +1,105 @@
+<body>
+<section class="cont">
+    <header class="header-class">
+      <nav class="nav">
+        <div class="logo"><span>F</span>INANCE<span>P</span>RO</div>
+        <ul>
+          <li><a routerLink="/home">Home</a></li>
+          <li><a routerLink="/about">About Us</a></li>
+          <li><a routerLink="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="contact-btn">
+        <div class="phone">📞Call us now!</div>
+        <div class="no">+45 332 65767 42</div>
+      </div>
+    </header>
+    <img src="/img/contact.png" alt="img not found">
+  </section>
+  
+  <div class="container">
+    <div class="left">
+      <h1>Get in touch</h1>
+      <p class="para">We value your thoughts and feedback! Whether you have questions, suggestions, or just want to say hello, feel free to reach out. Your connection is important to us, and we look forward to hearing from you soon!</p>
+      <div class="info-container">
+        <div class="image-container">
+          <img src="/icon/image.png" alt="Address Icon">
+          <img src="/icon/phone.png" alt="Phone Icon">
+          <img src="/icon/email.png" alt="Email Icon">
+          <img src="/icon/clock.png" alt="Clock Icon">
+        </div>
+        <div class="ul">
+          <ul>
+            <li>{{ address }}</li>
+            <li>{{ phone }}</li>
+            <li>{{ emailContact }}</li> <!-- Binding email from component -->
+            <li>{{ businessHours }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div class="form">
+      <div class="name">
+        <input type="text" placeholder="Your Name" [(ngModel)]="name" name="name">
+        <input type="email" class="email" placeholder="Your E-mail" [(ngModel)]="email" name="email">
+      </div>
+      <div class="subject">
+        <input type="text" placeholder="Subject" [(ngModel)]="subject" name="subject">
+      </div>
+      <div id="msg">
+        <input type="textarea" placeholder="Your message" [(ngModel)]="message" name="message">
+      </div>
+      <input type="submit" value="SEND MESSAGE" (click)="onSubmit()" id="sub">
+    </div>
+  </div>
+  
+  <footer class="last">
+    <div class="logo"><span>F</span>INANCE<span>P</span>RO</div>
+    <div class="foot-cont">
+      <div class="box1">
+        <h2>What We Do</h2>
+        <ul>
+          <li>Car loans</li>
+          <li>Debt consolidation loans</li>
+          <li>Home improvement loans</li>
+          <li>Wedding loans</li>
+          <li>Innovative Finance ISA</li>
+        </ul>
+      </div>
+      <div class="box2">
+        <h2>About Us</h2>
+        <ul>
+          <li>Our story</li>
+          <li>Meet the board</li>
+          <li>Meet the leadership team</li>
+          <li>Awards</li>
+          <li>Careers</li>
+        </ul>
+      </div>
+      <div class="box3">
+        <h2>Legal</h2>
+        <ul>
+          <li>Privacy policy</li>
+          <li>Loans2go principles</li>
+          <li>Website terms</li>
+          <li>Cookie policy</li>
+          <li>Conflicts policy</li>
+        </ul>
+      </div>
+      <div class="box4">
+        <h2>Site Info</h2>
+        <ul>
+          <li>Support</li>
+          <li>FAQ</li>
+          <li>Sitemap</li>
+          <li>Careers</li>
+          <li>Contact us</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      <p>Copyright ©2025 All rights reserved </p>
+    </div>
+  </footer>
+  </body>

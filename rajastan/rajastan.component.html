@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Explore Rajasthan</title>
+    </head>
+    <body>
+        <header>
+            <a href="/home">HOME</a>
+        </header>
+        <div class="titlecontainer">
+            <div class="titleheading"> 
+                Experience Rajasthan
+            </div>
+        </div>
+        <div class="titlecontainer">
+            <div class="tagline"> 
+                #City Of Diversity
+            </div>
+        </div>
+        <div class="side">
+         Cities to add to your bucket list
+     </div>
+     <div>
+          <figure class="titlepics-container">
+             <img id="titlepics" src="/images/Rajasthan/Feature-image-Rajasthan-tourism.jpg" alt="Places" height="100%" width="100%">
+             <a href="#"><figcaption id="titlecaption">Rajasthan</figcaption></a>
+          </figure>
+     </div>
+        <div class="side">
+            Flavours to cherish
+        </div>
+        <div>
+             <figure class="pics-container">
+                <img class="pics" src="/images/Rajasthan/hawa-mahal-jaipur.jpg" alt="Hawa Mahal" height="300px" width="300px">
+                <a href="#"><figcaption class="caption">Grandeur</figcaption></a>
+             </figure>
+             <figure class="pics-container">
+                <img class="pics" src="/images/Rajasthan/Sheeh Mahal.webp" alt="Sheeh Mahal" height="300px" width="300px">
+                <a href="#"><figcaption class="caption">Heritage</figcaption></a>
+             </figure>
+             <figure class="pics-container">
+                <img class="pics" src="/images/Rajasthan/ajmer-dargha.jpg" alt="Ajmer Dharga" height="300px" width="300px">
+                <a href="#"><figcaption class="caption">Spiritual</figcaption></a>
+             </figure>
+             <figure class="pics-container">
+                <img class="pics" src="/images/Rajasthan/Desert.webp" alt="Desert" height="300px" width="300px">
+                <a href="#"><figcaption class="caption">Tranquility</figcaption></a>
+             </figure>
+             <figure class="pics-container">
+                <img class="pics" src="/images/Rajasthan/Art.webp" alt="Art" height="300px" width="300px">
+                <a href="#"><figcaption class="caption">Art Forms</figcaption></a>
+             </figure>
+             <figure class="pics-container">
+                <img class="pics" src="/images/Rajasthan/Wildlife-of-Rajasthan.jpg" alt="Tiger" height="300px" width="300px">
+                <a href="#"><figcaption class="caption">Wild</figcaption></a>
+             </figure>
+        </div>                              
+    </body>
+</html>
+<script>
+    setInterval(changeImage,2000);
+let currentIndex = 0;
+const images = [
+        { src: '/images/Rajasthan/Feature-image-Rajasthan-tourism.jpg', caption: 'Rajasthan' },
+        { src: '/images/Rajasthan/jaislamer.jpg', caption: 'Jaislamer' },
+        { src: '/images/Rajasthan/Hawa Mahal.webp', caption: 'Hawa Mahal' },
+        { src: '/images/Rajasthan/machkund temple-dholpur.jpg', caption: 'Dholpur' },
+        { src: '/images/Rajasthan/chittorgarh-fort.jpg', caption: 'Chittorgarh Fort' },
+        { src: '/images/Rajasthan/mehrangarh-fort-jodhpur-rajasthan.jpg', caption: 'Jodhpur' },  
+        { src: '/images/Rajasthan/alwar-city-palace.jpg', caption: 'Alwar' },  
+        { src: '/images/Rajasthan/Lake Pichola.jpeg', caption: 'Lake Pichola' },
+        { src: '/images/Rajasthan/Bundi-Rajasthan.webp', caption: 'Bundi' },      
+    ];
+    function changeImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        document.getElementById('titlepics').src = images[currentIndex].src;
+        document.getElementById('titlecaption').innerText = images[currentIndex].caption;
+    }
+
+</script>

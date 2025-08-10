@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+.sanctuary {
+    background: rgb(216, 215, 172);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    padding: 20px;
+}
+.sanctuary h2 {
+    margin: 0;
+    color: #050606;
+}
+.sanctuary p {
+    color: #010303;
+}

@@ -1,0 +1,106 @@
+header{
+    background-color: rgba(6, 128, 180, 0.784);
+    color: rgb(2, 14, 24);
+    padding: 20px;
+}
+header a{
+    color: rgb(3, 27, 83);
+    font-family: Verdana;
+    font-size: larger;
+    font-weight: bolder;
+    text-decoration:underline;
+}
+.titlecontainer{
+    padding-top: 50px;
+    text-align: center;
+}
+.titleheading{
+    background-color: rgb(149, 9, 9);
+    color: white;
+    padding: 20px;
+    border-radius: 50px;
+    text-align: center;
+    font-family:Helvetica;
+    font-weight: bolder;
+    font-size:xx-large;
+}
+.tagline{
+    color:black;
+    padding: 5px;
+    text-align: center;
+    font-family:Arial;
+    font-weight:bolder;
+    font-size:x-large;
+    margin-bottom: 50px;
+}
+.pics-container
+{
+    position: relative;
+    display: inline-block;
+    width: 305px;
+    height: 305px;
+    left: 150px;
+}
+.caption {
+    position:absolute;
+    width: 100%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    height:auto;
+    background-color:transparent;
+    color:white;
+    text-align: center; 
+    text-shadow: 5px 5px 4px rgb(223, 26, 26);
+    padding: 2px;
+    font-size:xx-large;
+}
+.caption:active,.caption:hover{
+    color: rgb(174, 18, 18);
+    text-shadow: 5px 5px 4px rgb(243, 241, 241);
+}
+.pics-container a{
+    color:transparent;
+}
+.pics{
+    opacity: 1;
+}
+.pics:active,.pics:hover{
+    opacity: 0.5;
+}
+.side{
+    background:linear-gradient(90deg,#7fa5cd,#0e1685d6);
+    color: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    font-family:Helvetica;
+    font-weight: bolder;
+    font-size:large;
+}
+.titlepics-container
+{
+    position: relative;
+    display: inline-block;
+    width: 90%;
+    height: 100vh;
+    left: 0;
+}
+#titlecaption {
+    position:absolute;
+    width: 100%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    height:50px;
+    background-color:transparent;
+    color:white;
+    font-weight: bolder;
+    text-align: center; 
+    padding: 2px;
+    border-radius: 10px;
+    font-size:xx-large;
+}

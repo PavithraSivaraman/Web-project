@@ -1,0 +1,36 @@
+<div class="container3">
+    <div class="img-cont">
+      <img src="/img/sign.png" alt="Sign Image">
+    </div>
+  
+    <div class="info-cont">
+      <button type="button" class="btn back-btn" [routerLink]="['/home']" style="margin-bottom: 10px;">← Back</button>
+      <h2>Sign In</h2>
+      <form class="fm" #captchaForm="ngForm" (ngSubmit)="onSubmit()">
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" ngModel placeholder="Enter your email" required>
+  
+        <label for="pass">Password</label>
+        <input id="pass" type="password" name="password" ngModel placeholder="Enter your password" required>
+  
+        <label>Captcha</label>
+        <div class="captcha-container">
+          <span id="captcha-text">{{ captchaText }}</span>
+          <button type="button" id="reload-captcha" (click)="reloadCaptcha()">🔄</button>
+        </div>
+  
+        <input type="text" id="cap" [(ngModel)]="captchaInput" name="captcha" placeholder="Enter the captcha" required>
+  
+        <button type="submit" class="btn" id="sign">Sign In</button>
+  
+        <div id="sign_in">
+          <h6>Don't have an account? <a href="/signup">Sign Up</a></h6>
+        </div>
+       
+        
+
+
+      </form>
+    </div>
+  </div>
+  

@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Soft Gradient Background */
+body {
+    background: linear-gradient(to right, #ffdde1, #ee9ca7, #b5b7eb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Modern Form Styling */
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    color: #444;
+}
+
+.container h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #6a1b9a;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(100, 100, 100, 0.2);
+    font-size: 14px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.6);
+    color: #222;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #a5a5a5;
+    box-shadow: 0 0 8px rgba(200, 200, 200, 0.4);
+}
+
+/* Gender Selection */
+.gender-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    color: #555;
+    font-weight: 600;
+}
+
+/* Stylish Submit Button */
+.submit-btn {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-weight: bold;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    opacity: 0.9;
+}
+
+/* Login Link */
+.login-link {
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+.login-link a {
+    color: #6a1b9a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}

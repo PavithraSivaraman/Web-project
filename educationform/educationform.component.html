@@ -1,0 +1,53 @@
+<div class="registration-container">
+    <div class="left-panel">
+      <div class="overlay-text">
+        <h3>EDUCATION LOAN</h3>
+      </div>
+    </div>
+  
+    <div class="right-panel">
+      <div class="form-box">
+        <h2>Registration</h2>
+        <p class="subheading">Your Loan partner</p>
+  
+        <form (ngSubmit)="onSubmit()" #registrationForm="ngForm">
+          <input type="text" name="name" placeholder="Name" [(ngModel)]="user.name" required />
+          <input type="email" name="email" placeholder="Email" [(ngModel)]="user.email" required />
+          <input type="tel" id="phone" placeholder="Phone number" name="phone" [(ngModel)]="user.phone" required />
+          <input type="number" placeholder="Property value" id="propertyValue" name="propertyValue" [(ngModel)]="user.propertyValue" required />
+          <input type="number" id="loanAmount" placeholder="Loan amount requested" name="loanAmount" [(ngModel)]="user.loanAmount" readonly required />
+          <select id="term" name="term" [(ngModel)]="user.term" required>
+            <option value="" disabled selected>Select Loan Term</option>
+            <option value="1">1 Years</option>
+            <option value="2">2 Years</option>
+            <option value="3">3 Years</option>
+            <option value="4">4 Years</option>
+            <option value="5">5 Years</option>
+            
+          </select>
+          <input type="text" id="coursename" placeholder="Course Name" name="coursename" [(ngModel)]="user.coursename" readonly required />
+          <input type="text" id="courseinstitution" placeholder="Course Institution" name="courseinstitution" [(ngModel)]="user.courseinstitution" readonly required />
+          <!-- File Uploads -->
+          <div class="form-group">
+            <label for="admissionLetter">Upload Admission Letter:</label>
+            <input type="file" id="admissionLetter" name="admissionLetter" accept=".pdf,.jpg,.jpeg,.png" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="previousRecords">Upload Previous Academic Records:</label>
+            <input type="file" id="previousRecords" name="previousRecords" accept=".pdf,.jpg,.jpeg,.png" required>
+        </div>
+          <div class="form-group">
+            <label for="idProof">Upload ID Proof:</label>
+            <input type="file" id="idProof" name="idProof" accept=".pdf,.jpg,.jpeg,.png" required>
+          </div>
+  
+          <div class="action-buttons">
+            <button type="button" class="cancel">Cancel</button>
+            <button type="submit" class="confirm">Confirm</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

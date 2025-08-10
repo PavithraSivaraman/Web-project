@@ -1,0 +1,152 @@
+* {
+    font-family: 'Verdana';
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 80px;
+    background-color: rgb(69, 212, 155);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header h2 a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+header nav {
+    display: flex;
+}
+
+header nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: Verdana;
+    font-size: larger;
+}
+
+.profile-container {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.profile-info {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 15px;
+    text-align: left;
+}
+
+.label {
+    background-color: rgb(144, 229, 184);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+.value {
+    background-color: rgb(168, 217, 201);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+.modify {
+    width: 150px;
+    height: 30px;
+    background-color: rgb(45, 180, 45);
+    color: rgb(255, 255, 255);
+    font-size:medium;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+.delete-button {
+    width: 155px;
+    height: 30px;
+    background-color: rgb(235, 42, 42);
+    color: wheat;
+    font-size:medium;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 20px;
+}
+
+.modify:hover {
+    background-color:  #3ea542
+}
+.delete-button:hover {
+    background-color: crimson; /* Change color on hover */
+}
+
+.edit-form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.update-button,
+.cancel-button {
+    width: 100px;
+    padding: 10px;
+    background-color: #4CAF50; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.update-button:hover {
+    background-color: #45a049;
+}
+
+.cancel-button {
+    background-color: #f44336; 
+}
+
+.cancel-button:hover {
+    background-color: #e53935;
+}

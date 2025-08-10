@@ -1,0 +1,129 @@
+<!-- about.component.html -->
+
+<body>
+  <header class="header-class">
+    <nav class="nav">
+        <div class="logo"><span>F</span>INANCE<span>P</span>RO</div>
+        <ul>
+            <li><a routerLink="/home">Home</a></li>
+            <li><a routerLink="/about">About Us</a></li>
+            <li><a routerLink="/contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="contact-btn">
+        <div class="phone">📞Call us now!</div>
+        <div class="no">+45 332 65767 42</div> 
+    </div>
+</header>
+<div class="cont">
+    
+    <img src="/img/pay.jpg" class="i" alt="img not found" width="1000px">
+
+    <table>
+        <tr>
+            <td><img src="/img/about-img.jpg" class="secimg" alt="About Image"></td>
+            <td>
+                <div class="secpara">x
+                    <h2 class="heading">A team to help you</h2><br>
+                    <p style="color:grey;">
+                        At our loan website, we believe that navigating the world of loans should be seamless and stress-free. 
+                        Our financial experts are ready to assist you every step of the way. 
+                    </p><br>
+                    <button (click)="scrollToSection()"><h3>FIND OUT MORE</h3></button>
+                </div>
+            </td>
+        </tr>
+    </table></div>
+
+    <div class="third">
+      
+      
+        <div class="third">
+            <h2 class="heading" style="text-align:center;">What our Clients Say</h2>
+          
+            <div style="text-align: center; margin-bottom: 20px;">
+              <button class="feedback-btn" (click)="toggleModal()"><strong>FEEDBACK</strong></button>
+            </div>
+          
+            <div class="testimonial-container">
+                <div class="testimonial-card" *ngFor="let testimonial of testimonials">
+                    <div class="star-rating">
+                      <span *ngFor="let star of [1,2,3,4,5]">
+                        {{ star <= testimonial.rating ? '★' : '☆' }}
+                      </span>
+                    </div>
+                    <p>{{ testimonial.message }}</p>
+                    <p><br><b>{{ testimonial.name }}</b>, {{ testimonial.time }} {{ testimonial.emoji }}</p>
+                  </div>
+                  </div>                  
+          </div>
+          
+          <!-- Feedback Modal -->
+<div class="modal" [class.show]="showModal">
+    <div class="modal-content">
+      <span class="close" (click)="toggleModal()">&times;</span>
+      <h2>Leave Your Feedback</h2>
+      <form (ngSubmit)="submitFeedback()" #feedbackForm="ngForm">
+  
+        <input type="text" name="name" placeholder="Your Name" [(ngModel)]="newFeedback.name" required>
+        <input type="email" name="email" placeholder="Your Email" [(ngModel)]="newFeedback.email" required>
+        <textarea name="message" placeholder="Your Feedback..." rows="4" [(ngModel)]="newFeedback.message" required></textarea>
+  
+        <!-- Star Rating -->
+        <div class="star-input">
+          <span *ngFor="let star of [1,2,3,4,5]" 
+                (click)="newFeedback.rating = star"
+                [class.active]="star <= newFeedback.rating">
+            &#9733;
+          </span>
+        </div>
+  
+        <!-- Emoji Reactions -->
+        <div class="emoji-selector">
+          <span *ngFor="let emoji of emojis"
+                (click)="newFeedback.emoji = emoji"
+                [class.selected]="emoji === newFeedback.emoji">
+            {{ emoji }}
+          </span>
+        </div>
+  
+        <button type="submit">Submit Feedback</button>
+      </form>
+    </div>
+  </div>
+  <!-- fourth -->
+  <div class="fourth-section" id="fourth" #fourthSection>
+    <br><br>
+    <h2 class="section-heading">We’re regulated by these authorities</h2>
+  
+    <div class="card-grid">
+      <div class="reg-card" [ngClass]="authority.type" *ngFor="let authority of authorities">
+
+        <div class="reg-img">
+          <img [src]="authority.img" [alt]="authority.title">
+        </div>
+        <div class="reg-content">
+          <h3>{{ authority.title }}</h3>
+          <p>{{ authority.description }}</p>
+          <a  routerLink="/loan" class="reg-btn">Apply for a loan now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- map -->
+  <div id="map" style="height: 500px; width: 100%;"></div>
+
+  <!-- Additional Content Below the Map -->
+  
+  
+    <div class="parallax-background">
+      <div class="parallax-content">
+        <h4>Join us on this exciting journey to reshape the financial landscape.</h4>
+        <a  routerLink="/loan" class="cta-btn">Join Us</a>
+      </div>
+    </div>
+          
+      </div>
+</body>
+    

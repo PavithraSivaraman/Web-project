@@ -1,0 +1,27 @@
+
+<!-- loan-showcase.component.html -->
+<div class="hero-banner">
+    <img src="/img/hphone.jpg" class="hero-img">
+    <div class="overlay-text">
+      <h1><strong>LOANS</strong></h1>
+      <a routerLink="/about" class="breadcrumb">Home / About us</a>
+    </div>
+  </div>
+  
+  <div class="loan-section" *ngFor="let loan of loans">
+    <div class="loan-img-wrapper">
+      <a [routerLink]="loan.link">
+        <img [src]="loan.image" (mouseover)="changeOpacity($event, 1.0)" (mouseout)="changeOpacity($event, 0.15)" class="loan-img">
+      </a>
+    </div>
+    <div class="loan-content">
+      <h2>{{ loan.title }}</h2>
+      <p>{{ loan.description }}</p>
+      <!-- Use a button for Apply Now -->
+    <button [routerLink]="loan.link" class="apply-btn">Apply Now!</button>
+
+    </div>
+  </div>
+  
+  
+  

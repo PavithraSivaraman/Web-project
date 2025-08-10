@@ -1,0 +1,37 @@
+
+<main class="container">
+    <section class="calculator-section">
+      <h1>Personal Loan Eligibility Calculator</h1>
+      <p>
+        A personal loan eligibility calculator comes in handy when you need an instant idea of the maximum amount of loan you are eligible for...
+      </p>
+      <form (ngSubmit)="calculateEligibility()" #eligibilityForm="ngForm">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" ngModel required />
+  
+        <label for="income">Net Monthly Income (₹):</label>
+        <input type="number" id="income" name="income" [(ngModel)]="income" required />
+  
+        <label for="expenses">Expenses (₹) (Incl. Other EMIs):</label>
+        <input type="number" id="expenses" name="expenses" [(ngModel)]="expenses" required />
+  
+        <button type="submit">Calculate Eligibility</button>
+      </form>
+    </section>
+  
+    <section class="result-section">
+      <h2>Eligibility Result</h2>
+      <p class="amount">₹{{ eligibilityAmount }}</p>
+      <p class="message">{{ eligibilityMessage }}</p>
+    </section>
+  </main>
+  
+  <footer>
+    <div>
+      <p>
+        Axis Bank does not guarantee accuracy... The use of any information set out is entirely at the User's own
+      </p>
+      <a routerLink="/personalform"><button>Apply Online</button></a>
+    </div>
+  </footer>
+  

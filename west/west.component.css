@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    background:linear-gradient(90deg,#30cc93,#137dbb,#bc53cc);
+    margin: 0;
+    padding: 20px;
+}
+h1 {
+    color: #333;
+}
+.event {
+    background: rgb(224, 241, 245);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 15px;
+}
+.event h2 {
+    margin: 0;
+}
+.event p {
+    margin: 5px 0;
+}
